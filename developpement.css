@@ -46,6 +46,25 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 50vh;
+  -webkit-animation: flip-in-hor-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    1.1s both;
+  animation: flip-in-hor-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.1s
+    both;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 55, 255, 0.411),
+      rgba(0, 0, 255, 0.5)
+    ),
+    url("https://media.istockphoto.com/id/1295900106/photo/data-scientists-male-programmer-using-laptop-analyzing-and-developing-in-various-information.jpg?b=1&s=612x612&w=0&k=20&c=OuuM-gdJmwzZrW7_Brh0VkXedyx8JX5mzV7-9eM-VdY=");
+}
 
 /**
  * ----------------------------------------
@@ -81,6 +100,36 @@ a {
     transform: rotateX(0deg);
     -webkit-transform-origin: top;
     transform-origin: top;
+    opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation flip-in-hor-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@keyframes flip-in-hor-bottom {
+  0% {
+    -webkit-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
     opacity: 1;
   }
 }
